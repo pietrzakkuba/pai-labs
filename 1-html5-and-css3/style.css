@@ -26,8 +26,14 @@ header {
     padding-bottom: 1.0em;
     color: black;
 }
+#menu li:last-child {
+    background-color: white;
+}
 #menu > ul :first-child a{
     font-weight: 700;
+}
+#menu > ul :last-child a{
+    color: red;
 }
 #menu li :hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -62,9 +68,15 @@ article[class="main-article"], article[class="favourite-places"], article[class=
     text-align: justify;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1em;
-    margin-left: auto;
-    margin-right: auto;
     border: 0.5em solid rgba(0, 0, 0, 0.1);
+}
+article[class="news"] {
+    display: block;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    border: 0.5em solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
 }
 .cointainer {
     max-width: 1000px;
@@ -170,25 +182,4 @@ select {
     text-decoration: none;
     font-size: 1.4em;
     padding: 0.3em;
-}
-#in-build {
-    display: block;
-    height: 500px;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    /* transition: background-color 2.0s ease-in; */
-    background-color: rgba(0, 0, 0, 1); 
-}
-#in-build>p {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
-#in-build:hover {
-    transition: background-color 2.0s ease-in;
-    background-color: rgba(0, 0, 0, 0);
 }
