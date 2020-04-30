@@ -1,0 +1,16 @@
+﻿@{
+    string name = Request["name"];
+    if (String.IsNullOrEmpty(name))
+    {
+        name = "Robert Paulson";
+    }
+}
+
+    <div>
+        <ul>
+            @for (int i = 1; i <= 10; i++)
+            {
+                <li>His name is @name</li>
+            }
+        </ul>
+    </div>

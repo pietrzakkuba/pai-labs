@@ -1,0 +1,35 @@
+﻿
+    @{ 
+        var rules = (List<string>)Session["rules"];
+    } 
+    <div>
+        <p>
+            The first rule of Fight Club is: you do not talk about Fight Club.<br />
+            The second rule of Fight Club is: you DO NOT talk about Fight Club!<br />
+            Third rule of Fight Club: if someone yells “stop!”, goes limp, or taps out, the fight is over. <br />
+            Fourth rule: only two guys to a fight. <br />
+            Fifth rule: one fight at a time, fellas. <br />
+            Sixth rule: the fights are bare knuckle. No shirt, no shoes, no weapons. <br />
+            Seventh rule: fights will go on as long as they have to. <br />
+            And the eighth and final rule: if this is your first time at Fight Club, you have to fight.
+        </p>
+
+        <form method="post" action="/addrule.cshtml">
+
+            <label for="rule">Add new rule:</label>
+            <input type="text" name="rule" value="" />
+
+            <input type="submit" value="Submit" class="submit" />
+        </form>
+
+        <ol>
+            @if (rules != null)
+            {
+                for (int i = 0; i < rules.Count; i++)
+                {
+                    <li>@rules[i]</li>
+                }
+            }
+
+        </ol>
+    </div>
